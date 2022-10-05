@@ -25,17 +25,19 @@ const ListItem = styled("li")``;
 
 const LeftSideMenu = () => {
   const [open, setOpen] = useState("false");
-  const [active, setActive] = useState("0");
+  const [active, setActive] = useState("2");
   const [header, setHeader] = useState([]);
-  let [steps, setActiveSteps] = useState([]);
-  const [stage, setStage] = useState(null);
+  let [steps, setActiveSteps] = useState([
+    "Data Processing",
+    "Pre-built Analytics",
+    "Process Monitor",
+  ]);
+  const [stage, setStage] = useState("1");
   let [selectedid, setSelectedId] = useState("");
   const data = React.useContext(userContext);
 
   // stepper data
-  if (active == "0") {
-    steps = null;
-  } else if (active == "2") {
+  if (active == "2") {
     steps = ["Data Processing", "Pre-built Analytics", "Process Monitor"];
   } else if (active == "3") {
     steps = [
@@ -102,44 +104,42 @@ const LeftSideMenu = () => {
       <style>{".center {background-color:" + data.theme + "}"}</style>
       <style>{".active-stepper {color:" + "#367f9c" + "}"}</style>
       <style>{".active-tab {color:" + data.texttheme1 + "}"}</style>
-      {steps !== null ? (
-        <div className="steps-Header background  d-flex justify-content-center">
-          <ul className="steps d-flex">
-            {steps.map((step, index) => {
-              return (
-                <>
-                  {" "}
-                  <li className="steps-list ">
-                    <Link onClick={() => setStage(`${index + 1}`)}>
-                      {" "}
-                      <span className="normal">
-                        {stage == index + 1 ? (
-                          <i className="fas fa-check"></i>
-                        ) : (
-                          index + 1
-                        )}
-                      </span>
-                      <span
-                        className={stage == index + 1 ? "active-stepper" : ""}
-                      >
-                        {step}
-                      </span>
-                    </Link>
-                  </li>
-                </>
-              );
-            })}
-          </ul>
-        </div>
-      ) : (
-        <></>
-      )}
+
+      <div className="steps-Header background  d-flex justify-content-center">
+        <ul className="steps d-flex">
+          {steps.map((step, index) => {
+            return (
+              <>
+                {" "}
+                <li className="steps-list ">
+                  <Link onClick={() => setStage(`${index + 1}`)}>
+                    {" "}
+                    <span className="normal">
+                      {stage == index + 1 ? (
+                        <i className="fas fa-check"></i>
+                      ) : (
+                        index + 1
+                      )}
+                    </span>
+                    <span
+                      className={stage == index + 1 ? "active-stepper" : ""}
+                    >
+                      {step}
+                    </span>
+                  </Link>
+                </li>
+              </>
+            );
+          })}
+        </ul>
+      </div>
+
       {/* leftpanel on */}
       {data.value1 == "true" ? (
         <SplitPane
           split="vertical"
           // minSize={200}
-          defaultSize={50}
+          defaultSize={60}
           maxSize={400}
         >
           <div className="">
@@ -151,17 +151,18 @@ const LeftSideMenu = () => {
                     <div className="sideheader ">
                       {ele.Parent === "" ? (
                         <Link
-                          className=" align-items-center anchor d-flex justify-content-between "
+                          className=" align-items-center anchor d-flex justify-content-flex-start"
                           id={index + 1}
                           onClick={(e) => openHandler(ele.Child)}
                         >
                           {" "}
                           <div>
                             <i
-                              className={`fas fa-${ele.IconId} left-icon `}
+                              className={`fas fa-${ele.IconId} left-icon-side`}
                             ></i>
-
-                            {ele.Child}
+                          </div>
+                          <div>
+                            <span>{ele.Child}</span>
                           </div>
                           {open == "false" && ele.Child == selectedid ? (
                             <div className="arrow">
@@ -238,7 +239,7 @@ const LeftSideMenu = () => {
             <SplitPane
               split="vertical"
               minSize={200}
-              defaultSize={800}
+              defaultSize={300}
               maxSize={1000}
             >
               {stage === "1" ? (
@@ -262,12 +263,7 @@ const LeftSideMenu = () => {
               ) : null}
             </SplitPane>
           ) : (
-            <SplitPane
-              split="horizontal"
-              minSize={200}
-              defaultSize={400}
-              maxSize={500}
-            >
+            <div>
               {stage === "1" ? (
                 <Button />
               ) : stage === "2" ? (
@@ -275,14 +271,14 @@ const LeftSideMenu = () => {
               ) : (
                 <ControlHorizontal1 />
               )}
-            </SplitPane>
+            </div>
           )}
         </SplitPane>
       ) : data.value2 == "true" ? (
         <SplitPane
           split="vertical"
           minSize={500}
-          defaultSize={800}
+          defaultSize={300}
           maxSize={1000}
         >
           {stage === "1" ? (
@@ -305,7 +301,7 @@ const LeftSideMenu = () => {
           ) : null}
         </SplitPane>
       ) : (
-        <div className="middlepanel">
+        <div>
           {stage === "1" ? (
             <Button />
           ) : stage === "2" ? (

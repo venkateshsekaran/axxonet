@@ -50,7 +50,7 @@ function Navbar() {
         <>
           <style>{".bg {background-color:" + theme + "}"}</style>
 
-          <nav className="navbar navbar-dark bg  navbar-expand-lg header left-align ">
+          <nav className="navbar navbar-dark bg  navbar-expand-lg header left-align border-nav  ">
             <Link to="" onClick={toggleleftHandler}>
               <i class="fas fa-solid fa-bars left1-icon color_white"></i>
             </Link>
@@ -117,6 +117,7 @@ function Navbar() {
               </ul>
             </div>
           </nav>
+
           <userContext.Provider
             value={{
               value1: toggleleft,

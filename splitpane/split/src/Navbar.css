@@ -88,3 +88,7 @@ li img {
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
+.border-nav {
+  border-bottom: 2px double lightgray;
+}
