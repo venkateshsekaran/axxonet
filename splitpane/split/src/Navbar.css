@@ -1,0 +1,90 @@
+.header {
+  height: 50px;
+}
+li img {
+  border-radius: 50px;
+  border: none;
+  color: blue;
+}
+.bar {
+  color: #fff;
+  opacity: 0.8;
+}
+.bar:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.popupmenu {
+  padding: 16px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%),
+    0px 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+.popupmenu div {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: #fff;
+}
+
+.popupmenu a {
+  font-weight: 600;
+  color: rgb(8, 8, 26);
+  text-decoration: none;
+}
+
+.popupmenu a :active {
+  background-color: rgb(236, 240, 238);
+  color: white;
+}
+.popupmenu a :hover {
+  color: blue;
+}
+
+.line {
+  border-bottom: 1px inherit rgb(16, 17, 16);
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popuplist i {
+  margin-right: 4px;
+}
+
+.color_black {
+  color: black;
+}
+
+.left1-icon {
+  margin-right: 10px;
+}
+
+.left-icon {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.list-right {
+  gap: 20px;
+  align-items: center;
+}
+
+.left-align {
+  align-items: center;
+}
+
+.list-gap {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

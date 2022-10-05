@@ -1,0 +1,8 @@
+ <SplitPane  split="vertical" minSize={200} defaultSize={200} maxSize={400}>
+      <Content1 />
+  <SplitPane  split="horizontal" minSize={100} defaultSize={200} maxSize={300}>
+  <Content />
+  <Content1 />
+    
+  </SplitPane>
+</SplitPane>

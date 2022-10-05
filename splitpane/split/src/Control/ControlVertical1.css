@@ -1,0 +1,7 @@
+.background {
+  background-color: rgb(185, 202, 218);
+  color: rgb(19, 16, 16);
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+}

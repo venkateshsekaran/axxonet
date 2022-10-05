@@ -1,0 +1,90 @@
+.stages {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(241, 236, 236);
+}
+
+.stages-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 00.5rem;
+}
+.stages-menu > li {
+  background-color: rgb(178, 189, 185);
+  margin-left: 2rem;
+  border-radius: 5rem;
+
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  cursor: pointer;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.stages-menu > li:hover {
+  background: rgb(203, 141, 216);
+  cursor: pointer;
+}
+
+.stages-menu > li:hover,
+.stages-menu:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.stages-menu > li:active {
+  opacity: 1.5;
+}
+
+.stages a {
+  color: rgb(20, 2, 2);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.stages a:hover {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  opacity: 1.5;
+}
+.stages a.active {
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 1.5;
+}
+.stages li.active {
+  background-color: #8e05c2;
+  color: #000;
+  opacity: 1.5;
+}
+
+hr.new1 {
+  border-bottom: 1px solid green;
+  width: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[data-theme="dark"] {
+  --background: #000;
+  --text-primary: #fff;
+  --text-secondary: #8e05c2;
+  --accent: #8e05c2;
+  --border: #808080;
+  --form-bg: #191919;
+}
+
+.theme-toggle i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  text-align: center;
+}

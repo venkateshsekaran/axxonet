@@ -1,0 +1,126 @@
+.steps {
+  list-style: none;
+  gap: 2rem;
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 00.5rem;
+}
+.background {
+  background-color: #c0c0c0;
+  color: #fff;
+}
+
+.anchor {
+  text-decoration: none;
+}
+.active-stepper {
+  color: blue;
+}
+.steps-Header a {
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 24px;
+  font-family: inherit;
+}
+.steps-Header span {
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 24px;
+
+  position: relative;
+}
+.steps-Header span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #1b9de4;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.steps-Header span:nth-child(2):hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.steps-Header span:nth-child(1) {
+  color: #fff;
+}
+
+hr.new1 {
+  border-bottom: 1px solid green;
+  width: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps-list a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.normal {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-right: 1rem;
+  border: none;
+  background-color: #367f9c;
+  border-radius: 50%;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.dropdown a {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sidelist {
+  list-style: none;
+  padding-left: 25px;
+  opacity: 0.8;
+}
+.sidelist a {
+  color: black;
+}
+
+.sidelist-active {
+  font-weight: 600;
+}
+.sidelist a:hover {
+  color: black;
+  font-weight: 600;
+}
+
+.sideheader a {
+  color: rgb(118, 153, 129);
+  font-weight: 500;
+}
+
+.left_list_icon {
+  margin-right: 10px;
+}
+
+.middlepanel {
+  background-color: lightgray;
+  background-image: none;
+}

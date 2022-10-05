@@ -1,0 +1,36 @@
+.tab-header {
+  margin: 10px 10px;
+  width: fit-content;
+  text-align: center;
+  margin-top: 15vh;
+  margin-right: 15px;
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-bottom: 10px;
+  cursor: pointer;
+  color: rgb(118, 153, 129);
+  transition: all ease-in-out 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.margin {
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.active-tab {
+  opacity: 1.5;
+
+  border-bottom: 2px solid #42b3f4;
+  color: rgb(69, 196, 118);
+}
+
+.active-tab::after {
+  right: auto;
+  left: 100%;
+}

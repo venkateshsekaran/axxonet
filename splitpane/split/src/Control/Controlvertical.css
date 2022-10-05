@@ -1,0 +1,16 @@
+.search {
+  background-color: aliceblue;
+  border-style: groove;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.topblock {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  margin-top: 1rem;
+}
